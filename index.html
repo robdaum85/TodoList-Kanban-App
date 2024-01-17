@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Manager Prototype</title>
+</head>
+<body>
+
+    <div class="dashboard">
+        <div class="column" id="open-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Aberto</h2>
+            <div class="task" draggable="true" ondragstart="drag(event)" ondblclick="editTask(event)">Task 1</div>
+            <div class="task" draggable="true" ondragstart="drag(event)" ondblclick="editTask(event)">Task 2</div>
+        </div>
+        <div class="column" id="in-progress-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Em Desenvolvimento</h2>
+        </div>
+        <div class="column" id="paused-column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Parado</h2>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
